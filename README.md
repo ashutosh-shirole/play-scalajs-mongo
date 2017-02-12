@@ -1,5 +1,6 @@
 # Play Framework with Scala.js, Binding.scala, reactivemongo, silhouette
 
+WORK IN PROGRESS
 
 This is a simple example application serving as a starting point to developers who would like to use Play with Binding.scala, Silhouette and ReactiveMongo.
 
