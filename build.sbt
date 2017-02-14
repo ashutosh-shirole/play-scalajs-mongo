@@ -36,12 +36,14 @@ lazy val client = (project in file("client")).settings(
   persistLauncher := true,
   scalacOptions ++= Seq("-Xmax-classfile-name","78"),
   persistLauncher in Test := false,
+  resolvers += Resolver.sonatypeRepo("releases"),
   addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full),
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.1",
     "org.scala-lang.modules" % "scala-xml_2.11" % "1.0.6",
     "com.thoughtworks.binding" %%% "dom" % "10.0.0-M1",
     "com.thoughtworks.binding" %%% "futurebinding" % "10.0.0-M1",
+    "com.lihaoyi" %%% "upickle" % "0.4.3",
     "fr.hmil" %%% "roshttp" % "1.1.0"
   )
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
